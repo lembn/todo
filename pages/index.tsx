@@ -1,26 +1,21 @@
 import { Box } from "grommet";
 import { initializeApp } from "firebase/app";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
 
-// Initialize Firebase
 const app = initializeApp({
-  apiKey: process.env.apiKey,
-  authDomain: process.env.authDomain,
-  projectId: process.env.projectId,
-  storageBucket: process.env.storageBucket,
-  messagingSenderId: process.env.messagingSenderId,
-  appId: process.env.appId,
-  measurementId: process.env.measurementId,
-});
-
-const auth = getAuth();
-onAuthStateChanged(auth, (user) => {
-  if (user) {
-    const uid = user.uid;
-  } else {
-  }
+  apiKey: process.env.API_KEY,
+  authDomain: process.env.AUTH_DOMAIN,
+  projectId: process.env.PROJECT_ID,
+  storageBucket: process.env.STORAGE_BUCKET,
+  messagingSenderId: process.env.MESSAGING_SENDER_ID,
+  appId: process.env.APP_ID,
+  measurementId: process.env.MEASUREMENT_ID,
 });
 
 export default function Home() {
-  return <Box></Box>;
+  return (
+    <Box>
+      <h1>{process.env.API_KEY}</h1>
+      <h1>Test</h1>
+    </Box>
+  );
 }
