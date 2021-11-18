@@ -12,8 +12,8 @@ const app = initializeApp({
   appId: process.env.appId,
   measurementId: process.env.measurementId,
 });
-const auth = getAuth();
 
+const auth = getAuth();
 onAuthStateChanged(auth, (user) => {
   if (user) {
     const uid = user.uid;
