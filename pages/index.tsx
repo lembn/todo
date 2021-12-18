@@ -12,10 +12,5 @@ const app = initializeApp({
 });
 
 export default function Home() {
-  return (
-    <Box>
-      <h1>{process.env.API_KEY}</h1>
-      <h1>Test</h1>
-    </Box>
-  );
+  return <Box></Box>;
 }
